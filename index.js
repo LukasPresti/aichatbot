@@ -125,7 +125,21 @@ async function processQuery(query, vectorStore, llm) {
   }
 }
 
-// Run the demo
+import express from 'express';
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Run the RAG demo
 runRAGDemo()
   .then(() => console.log('\nRAG demo completed.'))
   .catch(error => console.error('Fatal error in RAG demo:', error));
+
+// Keep app alive for Railway
+app.get('/', (req, res) => {
+  res.send('RAG Demo ran successfully. Check console output in Railway logs.');
+});
+
+app.listen(PORT, () => {
+  console.log(`Express server running on port ${PORT}`);
+});
