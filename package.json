@@ -1,0 +1,12 @@
+{
+  "name": "assignment1_llm_embeddings",
+  "version": "1.0.0",
+  "description": "## Introduction (Conceptual Background)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
